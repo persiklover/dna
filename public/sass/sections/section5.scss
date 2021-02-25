@@ -15,9 +15,15 @@
     width:  133.8rem;
     height:     7rem;
     background: url(../img/white-wave-top.png) no-repeat center / contain;
+
+    @include sm {
+      margin: 0;
+      width: 100%;
+    }
   }
 
   &::before {
+    margin-left: -0.175rem;
     top: -2.1em;
     transform: translateX(-50%);
   }

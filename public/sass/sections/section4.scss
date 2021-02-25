@@ -1,5 +1,6 @@
 .section4 {
-  background: var(--primary-color) url(../img/section4/section4-background.jpg) no-repeat 0 -46.9rem / cover;
+  position: relative;
+  background: #8ea6d6 url(../img/section4/section4-background.jpg) no-repeat 0 -46.9rem / cover;
   
   @include sm {
     background-image: url(../img/section4/section4-background-mobile.jpg);
@@ -23,6 +24,20 @@
       font-size:       1.7rem;
       padding-top:      16rem;
       padding-bottom: 12.5rem;
+    }
+  }
+
+  &__scrolldown {
+    position: absolute;
+    z-index:    3;
+    bottom: -0.7rem;
+    left:       50%;
+    transform: translateX(-50%);
+
+
+    @include sm {
+      bottom: 0.7rem;
+      transform: translate(-50%, 1.25rem);
     }
   }
 }

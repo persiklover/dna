@@ -84,6 +84,10 @@
       input {
         @include visually-hidden();
 
+        &.error + span {
+          outline: .25rem auto red
+        }
+
         &:checked + span {
           background: white url(../img/checkbox.svg) no-repeat center /  2.5rem;
         }
@@ -362,23 +366,16 @@
             + span {
               position: relative;
               display: flex;
-              margin-right: .6rem;
+              margin-top:   .15rem;
+              margin-right:  .6rem;
               width:  1.5rem;
               height: 1.5rem;
-              border: 0.2rem solid;
               border-radius: 50%;
+              background: url(../img/round_stroke.svg) no-repeat center / contain;
             }
 
-            &:checked + span::before {
-              content: '';
-              position: absolute;
-              left: 50%;
-              top:  50%;
-              transform: translate(-50%, -50%);
-              background: currentColor;
-              border-radius: 50%;
-              width:  0.75rem;
-              height: 0.75rem;
+            &:checked + span {
+              background-image: url(../img/round_stroke_fill.svg)
             }
           }
 
@@ -421,18 +418,25 @@
           input {
             @include visually-hidden();
 
-            &:checked + img {
-              outline: .9rem solid #f5979d;
-              outline-offset: -.9rem;
+            &:checked ~ img {
+              display: block;
+
+              &:first-of-type {
+                display: none;
+              }
             }
           }
 
           img {
             margin-bottom: 1.5rem;
-            width:  14.7rem !important;
-            height: 23.9rem !important;
+            width:  21.1rem !important;
+            height: 27.8rem !important;
 
             pointer-events: none;
+
+            &:last-of-type {
+              display: none;
+            }
           }
         }
       }

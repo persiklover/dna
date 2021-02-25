@@ -114,7 +114,13 @@
     background: url(../img/section3/dark-wave.png) no-repeat center / contain;
     width: 133.8rem;
     height: 7rem;
+    
+    @include sm {
+      margin-left: 0;
+      width: 100%;
+    }
   }
+
   &::after {
     z-index: -1;
     position: absolute;
@@ -127,6 +133,11 @@
     background: url(../img/section3/dark-wave.png) no-repeat center / contain;
     width: 133.8rem;
     height: 7rem;
+
+    @include sm {
+      margin-left: 0;
+      width: 100%;
+    }
   }
 
   &__btn {
@@ -140,7 +151,7 @@
     z-index:    2;
     position: absolute;
     bottom: -1.7rem;
-    left:     49.8%;
+    left:     50%;
     transform: translateX(-50%);
   }
 }

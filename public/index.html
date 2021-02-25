@@ -182,6 +182,7 @@
           <a href="#section5" class="btn section3__btn">
             Оформить заказ
           </a>
+        </div>
       </div>
       <a class="scrolldown section3__scrolldown" href="#section4" aria-label="Перейти к следующей секции">
         <img class="scrolldown__icon" src="./img/section1/scroll-arrow.svg" alt="" aria-hidden="true">
@@ -190,7 +191,7 @@
     <!-- section3 end -->
 
     <!-- section4 start -->
-    <section class="section4">
+    <section id="section4" class="section4">
       <div class="container">
         <div class="section4__inner">
           <h3 class="section4__description">
@@ -199,6 +200,10 @@
           </h3>
         </div>
       </div>
+
+      <a class="scrolldown section4__scrolldown" href="#section5" aria-label="Перейти к следующей секции">
+        <img class="scrolldown__icon" src="./img/section1/scroll-arrow.svg" alt="" aria-hidden="true">
+      </a>
     </section>
     <!-- section4 end -->
     
@@ -517,7 +522,7 @@
                   <div class="form-step-5-content__agreement-wrap">
 
                     <label class="agreement">
-                      <input type="checkbox" name="agreed">
+                      <input type="checkbox" name="agreed" required>
                       <span></span>
                       <span class="agreement__text">
                         Я согласен с условиями предоставления услуги<br>
@@ -546,7 +551,7 @@
                         <span></span>
                         <span class="form-step-5-payment-radio__label">
                           Наличными при получении
-                          <small>(Доступно тоько для Москвы и МО)</small>
+                          <small>(Доступно только для Москвы и МО)</small>
                         </span>
                       </label>
                     </div>
@@ -602,7 +607,8 @@
                          name="certificate-material" 
                          value="Напечатнный сертификат"
                          data-price="18 000">
-                  <img src="img/section5/certificate-1.png" alt="Напечатнный сертификат">
+                  <img src="img/section5/nostroke1.png" alt="Напечатнный сертификат">
+                  <img src="img/section5/stroke1.png" alt="Напечатнный сертификат">
                   Напечатнный<br>
                   сертификат с доставкой<br>
                   18 000 ₽
@@ -614,7 +620,8 @@
                          name="certificate-material" 
                          value="Электронный сертификат"
                          data-price="17 000">
-                  <img src="img/section5/certificate-2.png" alt="Электронный сертификат">
+                  <img src="img/section5/nostroke2.png" alt="Электронный сертификат">
+                  <img src="img/section5/stroke2.png" alt="Электронный сертификат">
                   Электронный<br>
                   сертификат на e-mail<br>
                   17 000 ₽
@@ -666,7 +673,7 @@
                 </label>
 
                 <label class="agreement">
-                  <input type="checkbox" name="agree">
+                  <input type="checkbox" name="agree" required>
                   <span></span>
                   <span class="agreement__text">
                     Я согласен с условиями предоставления услуги<br>
@@ -722,6 +729,46 @@
     <!-- section5 end -->
 
   </main>
+
+  <!-- footer start -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <img class="site-footer__logo" src="./img/footer/logo_bottom.svg" alt="Логотип Dna-drop">
+  
+        <h3 class="visually-hidden">Связаться с нами</h3>
+        <ul class="site-footer__info">
+  
+          <li>
+            <a href="#" target="_blank" aria-label="Мы в инстаграмме">Instagram</a> / <a href="#" target="_blank"
+              aria-label="Мы в Фэйсбук">Facebook</a>
+          </li>
+  
+          <li>
+            <h4>По вопросам продукции</h4>
+            <a href="tel:79261613903" target="_blank" aria-label="Позвонить нам">+7(926)161-39-03</a><br>
+            <a href="kira@dnadrop.ru" target="_blank" aria-label="Написать нам на почту">kira@dnadrop.ru</a><br>
+            /
+          </li>
+  
+          <li>
+            <h4>PR-запросы и сотрудничество</h4>
+            <a href="pr@dnadrop.ru" target="_blank" aria-label="Написать нам на почту">pr@dnadrop.ru</a><br>
+            /<br>
+            <a href="#" target="_blank">Скачать пресс-релиз</a><br>
+            <a href="#" target="_blank">Пресс-матриалы</a>
+          </li>
+  
+          <li>
+            <a href="#" target="_blank">Реквизиты</a>
+            /
+            <a href="#" target="_blank">Оферта</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
 
   <!-- вы достигли края вселенной  -->
   <script src="lib/jquery/jquery.min.js"></script>
