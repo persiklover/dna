@@ -1,0 +1,33 @@
+.section5 {
+  position: relative;
+  background-color: white;
+  padding: 4rem 0;
+
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+
+    width:  133.8rem;
+    height:     7rem;
+    background: url(../img/white-wave-top.png) no-repeat center / contain;
+  }
+
+  &::before {
+    top: -2.1em;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    bottom: -2.1em;
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  .container {
+    max-width: 110rem;
+  }
+}

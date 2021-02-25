@@ -1,0 +1,15 @@
+.scrolldown {
+  width: 100%;
+  width:  3.7rem!important;
+  height: 3.6rem!important;
+  
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  
+  &__icon {
+    margin: 0 auto;
+    margin-top: 1.3rem;
+    width:      1.3rem!important;
+    height:     1.3rem!important;
+  } 
+}

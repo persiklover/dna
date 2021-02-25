@@ -1,0 +1,15 @@
+$fonts: '../fonts/';
+
+/* Futura */
+
+@font-face {
+  font-family: 'Futura PT';
+  src: 
+    local('Futura PT Light'),
+    local('FuturaPT-Light'),
+    url($fonts + 'Futura/FuturaPT-Light.woff2') format('woff2'),
+    url($fonts + 'Futura/FuturaPT-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,146 @@
+.section3 {
+  z-index: 1;
+  position: relative;
+  color: azure;
+  background: var(--primary-color);
+  font-weight: 300;
+
+  &__title {
+    margin: 3.35rem 0 1.5rem;
+
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items:     center;
+
+    font-size: 1.5rem;
+    font-weight: 300;
+    background-color: transparent;
+
+    .dna-steps {
+      margin-top:    1rem;
+      margin-bottom: 6rem;
+      
+      display: inline-flex;
+      justify-content: space-between;
+      
+      @include sm {
+        margin-top:    4rem;
+        margin-bottom: 5.5rem;
+      }
+      
+      &__item {
+        display:           flex;
+        flex-direction:  column;
+        align-items:     center;
+        
+        margin: 0;
+        margin-right: 4.5rem;
+        text-align:   center;
+
+        @include sm {
+          margin-right: 5.2rem;
+        }
+
+        .shell {
+          min-height: 11.1rem;
+        }
+
+        a {
+          text-decoration: underline;
+          color:           var(--accent-color);
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          }
+        }
+        
+        &:nth-child(1) {
+          img {
+            width:    14rem;
+            height: 10.8rem;
+          }
+        }
+        
+        &:nth-child(2) {
+          img {
+            position: relative;
+            top: 2.5rem;
+
+            width:  9.2rem;
+            height: 8.8rem;
+          }
+        }
+        &:nth-child(3) {
+          img {
+            position: relative;
+            top:      2rem;
+
+            width: 11.1rem;
+            height: 9.6rem;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      h4 {
+        min-width: 20rem;
+        margin: 0;
+        padding: 0;
+        margin-top: 3.5rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -3.6rem;
+    margin-left: -0.175em;
+    background: url(../img/section3/dark-wave.png) no-repeat center / contain;
+    width: 133.8rem;
+    height: 7rem;
+  }
+  &::after {
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    bottom: -3.6rem;
+    margin-left: 0.350em;
+    transform: translateX(-50%) rotate(180deg);
+
+    content: '';
+    background: url(../img/section3/dark-wave.png) no-repeat center / contain;
+    width: 133.8rem;
+    height: 7rem;
+  }
+
+  &__btn {
+    margin-bottom: 7rem;
+    @include sm {
+      padding: .45rem;
+    }
+  }
+
+  &__scrolldown {
+    z-index:    2;
+    position: absolute;
+    bottom: -1.7rem;
+    left:     49.8%;
+    transform: translateX(-50%);
+  }
+}

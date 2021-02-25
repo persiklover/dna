@@ -1,0 +1,39 @@
+body {
+  font-family: 'Futura PT', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.25;
+  color: #293c54;
+
+  @include sm {
+    font-size: 1.7rem;
+  }
+}
+
+p {
+  a {
+    color: var(--accent-color);
+
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.sm-only {
+  display: none;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.hide-sm {
+  @include sm {
+    display: none;
+  }
+}
+  

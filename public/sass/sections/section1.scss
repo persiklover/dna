@@ -1,0 +1,92 @@
+.section1 {
+  position: relative;
+  
+  padding-bottom: 21.2rem;
+
+  background: currentColor url(../img/section1/section1-background.jpg) no-repeat center / cover;
+
+  @include sm {
+    padding-top:       0rem;
+    padding-bottom: 17.4rem;
+    padding-left:     12rem;
+
+    background-image: url(../img/section1/section1-background-mobile.jpg);
+    background-position: center right;
+    background-size: contain;
+  }
+  
+  &__logo {
+    margin-bottom: 2.5rem;
+
+    @include sm {
+    margin-bottom: 5rem;
+    }
+  }
+  
+  &__under-logo-text {
+    margin:             0!important;
+    margin-bottom: 3.8rem!important;
+
+    font-size:  2rem;
+    font-weight: 300;
+    color: var(--translucent);
+    
+    text-align: center;
+    
+    @include sm {
+      font-size:     1.7rem;
+      margin-bottom: 4.2rem!important;
+    }
+  }
+
+  &__inner{
+    display: inline-flex;
+    flex-direction: column;
+
+    margin-top: 19.4rem;
+
+    justify-content: center;
+    align-items: center;
+    @include sm {
+      margin-left: 2rem;
+      margin-top:  8rem;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 1.6rem;
+    @include sm {
+      margin-bottom: 1.3rem;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__scrolldown {
+    position: absolute;
+    z-index:    1;
+    bottom:   -1%;
+    left:     50%;
+    transform: translateX(-50%);
+
+    @include sm {
+      bottom: -2%;
+    }
+  }
+
+  // absolute positioned elements
+  &__left-angle {
+    position: absolute;
+    top:  0;
+    left: 0;
+
+    width: 36.2rem;
+
+    @include sm {
+      display: none;
+    }
+  }
+} 
+
+
