@@ -50,8 +50,37 @@ $(function() {
     $(".js-form-title").text(title);
   }
 
+  // Слайдер выобра формы кулона
+
+  // var slider = tns({
+  //   container: '.js-pedant-type-slider',
+  //   items: 1,
+  // });
+
+  $(".js-pedant-type-slider").slick({
+    dots: true
+  });
+
+  // $(".js-pedant-type-slider")
+  //   .addClass("owl-carousel")
+  //   .owlCarousel({
+  //     loop:   true,
+  //     nav:    true,
+  //     dots:   true,
+  //     items:  1,
+  //     margin: 1,
+  //     mouseDrag: false,
+  //     touchDrag: false,
+  //   });
+
   // Слайдер формы заказа
+  
   const $formSlider = $(".js-form-slider");
+
+  $formSlider.find("button:not([type=submit])").click(function(e) {
+    e.preventDefault();
+  });
+
   $formSlider
     .addClass("owl-carousel")
     .owlCarousel({
@@ -120,7 +149,18 @@ $(function() {
       .addClass("hidden")
       .filter(`[data-type="${this.value}"]`)
       .removeClass("hidden");
+    
+    $(".js-pedant-type-slider").slick('unslick');
+    $(".js-pedant-type-slider").slick({ dots: true });
   });
+
+  // По дефолту видима только первая обложка
+  $(".js-custom-radiogroup")
+    .find("label")
+      .filter(":first")
+      .find("input")
+      .trigger("click");
+
   // custom-radiogroup end
 
   // Блок с зазумленной картинкой START
@@ -137,9 +177,7 @@ $(function() {
     e.preventDefault();
     var $image = $(this).parents(".custom-radiogroup").find(".custom-radiogroup-cover:not(.hidden)");
     if ($image[0].tagName != "IMG") {
-      $image = $image
-        .find(".owl-item.active")
-        .find("img");
+      $image = $image.find("img.slick-active")
     }
 
     $zoomContainer.removeAttr("hidden");
@@ -147,20 +185,7 @@ $(function() {
     $zoomImage.prop("src", $image.prop("src"));
     $zoomImage.prop("alt", $image.prop("alt"));
   });
-  // Блок с зазумленной картинкой START
 
-  // Слайдер выобра формы кулона
-  $(".js-pedant-type-slider")
-    .addClass("owl-carousel")
-    .owlCarousel({
-      loop:   true,
-      nav:    true,
-      dots:   true,
-      items:  1,
-      margin: 1,
-      mouseDrag: false,
-      touchDrag: false,
-    });
 
   // Радио-кнопки, связанные с кулоном
   $(".js-pedant-type-radio").click(function() {

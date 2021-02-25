@@ -1,0 +1,63 @@
+.site-footer {
+  padding-top:  8.4rem;
+  padding-bottom: 6rem;
+
+  background-color: var(--primary-color);
+  color: azure;
+
+  p {
+    padding: 0;
+    margin:  0;
+  }
+
+  &__logo {
+    margin:      0 auto;
+    margin-bottom: 3rem;
+    width:  7.1rem;
+    height: 6.9rem;
+  }
+  &__inner {
+    color: azure;
+    display: flex;
+    flex-direction:  column;
+    align-items: center;
+  }
+  &__info {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    list-style: none;
+
+    li {
+      h4 {
+        margin: 0;
+
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      
+      a {
+        color: var(--accent-color);
+
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+
+      &:nth-child(1) {
+        margin-bottom: 2rem!important;
+      }
+      &:nth-child(4) {
+        margin-top: 3.8rem;
+  
+        text-transform: uppercase;
+      }
+    }
+
+  }
+}
